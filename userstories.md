@@ -113,7 +113,12 @@ Dev Notes:
 As the site owner, I want to insert my affiliate marketing link into the
 outgoing urls.
 
+Acceptance:
+- test that these work on mobile, if redirected to amazon app
+
 Dev Notes:
+- [Signup](https://affiliate-program.amazon.com/)
+
 - scrub links
 - write them to db
 
@@ -152,6 +157,14 @@ Acceptance:
 
 Dev Notes:
 - function in the backend: getProfileIdFromPhoneNumber(phone_number) = profile_id
+
+---
+
+As a user, Amazon links I click should go to 'smile.amazon.de'.
+
+Acceptance:
+- in the settings I can set that I want to use 'smile.*' (dropdown to choose)
+- explaination for the user what smile is for (charitable donations on amazons part)
 
 ---
 

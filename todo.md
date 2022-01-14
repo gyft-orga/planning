@@ -27,6 +27,8 @@
 
 ### Setting up the server
 
+- create shared keepass for credentials
+
 - [signup netwise](https://www.netwise.co.uk/students/)
 - add ssh keys
 - install & config zsh, tmux

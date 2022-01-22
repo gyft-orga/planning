@@ -7,3 +7,11 @@ Acceptance:
 
 ---
 
+As a user, I can disable notifications by category.
+
+Acceptance:
+- categories available to toggle:
+  - upcoming events (prompt to update gift list)
+  - claims on your gifts
+  - reponses to your claims
+  - other?

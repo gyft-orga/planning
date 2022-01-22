@@ -1,18 +1,42 @@
-TODO: convert into user stories:
-Signup:
-1. (preferred and should be emphasized as such): requires:
-- phone number
-- email (2fa, notifications)
-optional:
-- username (generated otherwise, but changable)
-- password (you could just not have this to make it easier onyourself)
-2. requires:
-- username
-- email (2fa, notifications)
-optional:
-- phone number (another prompt for it)
+As a interested visitor, I want to sign up, to access services only available to
+users.
 
+Dev Notes:
+- data to be provided at signup:
+  - required:
+    - email
+    - phone nr
+    - birthday
+  - optional:
+    - username (generated otherwise, compare: github repo name generator)
+    - password (MVP: required)
+- verify phone number via sms (what are the costs?)
+- ? verify email? -> is there potential for abuse?
 
-required:
-- birthday
-- email
+---
+
+As a registered user, I want to sign in.
+
+---
+
+As a registered user, I want to sign in using my password.
+
+Acceptance:
+- user has set a password
+  - at sign up
+  - or added later on
+
+---
+
+As a registered user, I want to sign in by receiving an OTP via email.
+
+Description:
+This is not MVP
+
+Acceptance:
+- user has not set a password
+  - at sign up
+  - or deleted it afterward
+
+---
+

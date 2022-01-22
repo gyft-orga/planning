@@ -39,10 +39,6 @@
 
 ### Setting up the server
 
-create shared keepass for credentials
-
-<br>
-
 - [signup netwise](https://www.netwise.co.uk/students/)
 - add ssh keys
 - install & config zsh, tmux
@@ -59,11 +55,14 @@ add dependencies:
 - mongo
 - rabbit-mq
 
+### Github orga
+
+- create github orga (can be renamed)
+- create private repo with:
+  - accounting (spreadsheet for income & expenses: advanced by whom, date & purpose)
+  - secrets (keepass file with credentials)
+
 ### Set up project base
-
-create github orga (can be renamed)
-
-<br>
 
 - configure typescript setup
   - backend

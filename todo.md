@@ -10,7 +10,16 @@
   - Linting
   - Clean Code Rules (function length, etc.)
   - Test Coverage (Github bot?)
+  - Unit, Integration, E2E Tests
   - Domain Driven Design and Clean Directory Structure
+  - Definitions of what goes where:
+    - controller, service, validator, model, repository, interface, entity?
+  - No new, only factories on .create
+  - Pair programming encuraged
+  - Code Conventions:
+    - https://en.wikipedia.org/wiki/Naming_convention_(programming)#JavaScript
+    - https://www.crockford.com/code.html
+  - [SOLID](https://en.wikipedia.org/wiki/SOLID)
 
 **Orga**
 - Configure Project

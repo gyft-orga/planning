@@ -2,7 +2,7 @@
 
 ## Planning
 
-**Code**
+**Code Standards**
 - Architecture Diagram
 - Write Code Standards
   - Git Workflow
@@ -21,7 +21,7 @@
     - https://www.crockford.com/code.html
   - [SOLID](https://en.wikipedia.org/wiki/SOLID)
 
-**Orga**
+**Organization**
 - Configure Project
   - What does a sprint look like?
   - Sprint length
@@ -41,21 +41,17 @@
 
 ## Tasks
 
-### Orga
-
-- create jira instance
-- transfer mvp epics
-
 ### Setting up the server
 
-- [signup netwise](https://www.netwise.co.uk/students/)
+- ~~netwise~~
+- find alternative hosting solution (using gh student credits?)
 - add ssh keys
 - install & config zsh, tmux
 
 <br>
 
 - register domain (on new namecheap account)
-- configure dns for netwise
+- configure dns for server
 
 <br>
 
@@ -66,8 +62,7 @@ add dependencies:
 
 ### Github orga
 
-- create github orga (can be renamed)
-- create private repo with:
+- create private repos with:
   - accounting (spreadsheet for income & expenses: advanced by whom, date & purpose)
   - secrets (keepass file with credentials)
 
@@ -80,5 +75,5 @@ add dependencies:
   - backend
   - with react
 - configure linting
-  - backend
+  - backend ([base](https://github.com/jneidel/dotfiles/tree/master/.config/eslint))
   - with react

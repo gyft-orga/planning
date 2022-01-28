@@ -26,9 +26,6 @@
   - What does a sprint look like?
   - Sprint length
 
-**Design**
-- Wireframe
-
 ### Decided
 
 **Stack:**
@@ -64,7 +61,6 @@ add dependencies:
 
 - create private repos with:
   - accounting (spreadsheet for income & expenses: advanced by whom, date & purpose)
-  - secrets (keepass file with credentials)
 
 ### Set up project base
 

@@ -2,29 +2,75 @@
 
 ## Planning
 
-**Code Standards**
-- Architecture Diagram
-- Write Code Standards
-  - Git Workflow
-  - Code Review Process
-  - Linting
-  - Clean Code Rules (function length, etc.)
-  - Test Coverage (Github bot?)
-  - Unit, Integration, E2E Tests
-  - Domain Driven Design and Clean Directory Structure
-  - Definitions of what goes where:
-    - controller, service, validator, model, repository, interface, entity?
-  - No new, only factories on .create
-  - Pair programming encuraged
-  - Code Conventions:
-    - https://en.wikipedia.org/wiki/Naming_convention_(programming)#JavaScript
-    - https://www.crockford.com/code.html
-  - [SOLID](https://en.wikipedia.org/wiki/SOLID)
+### Code Standards
 
-**Organization**
+**Process**
+- Standards must be treated like rules and hence must be enforceable.
+- weigh: quality vs. time spent on it
+- not a one-man show, these are also Wilfredos standards
+
+**Contents**
+- Git
+  - Feature Branches
+  - No development branch (util we have a testing pipeline)
+  - Commit adhere to [these 7 rules](https://cbea.ms/git-commit/#seven-rules)
+  - A commit contains one _logical change_
+  - [General background](https://who-t.blogspot.com/2009/12/on-commit-messages.html) [concrete tips](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
+  - use [Conventional Commits](https://www.conventionalcommits.org/)?
+  - To come up with thoughtful commit messages, consider the following:
+    - Why have I made these changes?
+    - What effect have my changes made?
+    - Why was the change needed?
+    - What are the changes in reference to?
+- Versioning
+  - [semver](https://semver.org)
+- Code Review
+  - together?
+- Linting
+  - Pre-push hook
+  - integrated into IDE
+- Code
+  - always use `const` unless `let` or `var` are specifically needed
+  - no [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming))
+  - no comments unless absolutely necessary (cf. clean code, comments are a
+    failure to express yourself in code)
+  - todo:
+    - rules for logging
+    - rules for throwing exceptions
+    - rule for Class.create factory over new Class
+    - rule for controller content
+    - [Clean Code Rules](https://invidious.namazso.eu/playlist?list=PLmmYSbUCWJ4x1GO839azG_BBw8rkh-zOj) (function length, etc.)
+- Test Coverage
+  - 90% something
+  - integration for everything
+  - TDD and unit tests for error prone and complicated problems (cf. [TDD vs writing tests afterwards](https://anchor.fm/fredrik-christenson/episodes/What-is-faster-on-average--TDD-or-writing-tests-after-the-code-emkkl8))
+  - E2E tests (to cut down [regression testing](https://anchor.fm/fredrik-christenson/episodes/Why-do-software-developers-suck-at-regression-testing-emmgvi))
+  - tests run automatically for every PR by travis
+- Domain Driven Design and Clean Directory Structure
+  - `test` follows the same directory structure as `src`
+  - tests files have the same name as the file they are testing but `.test.ts`
+  instead of `.ts` (e.g. `VatCalculator.test.ts`)
+  - `src/service` includes stateless functions/classes
+  - `src/repository` includes functions that access data from the database via
+  ORM models
+  - `src/model` ORM models
+  - `src/validator` functions that validate a given input - should `throw new
+  Error` or return `{error:true}` object?
+  - controller, interface, entity?
+- Pair programming encuraged
+- Code Conventions:
+  - https://en.wikipedia.org/wiki/Naming_convention_(programming)#JavaScript
+  - https://www.crockford.com/code.html
+- [SOLID](https://en.wikipedia.org/wiki/SOLID)
+
+### Organization
 - Configure Project
   - What does a sprint look like?
   - Sprint length
+  - LICENSE: AGPL?
+
+**Architecture**
+- Architecture Diagram
 
 ### Decided
 
@@ -64,12 +110,10 @@ add dependencies:
 
 ### Set up project base
 
-- configure typescript setup
-  - backend
-  - react
-- configure jest test setup (in TS)
-  - backend
-  - with react
-- configure linting
-  - backend ([base](https://github.com/jneidel/dotfiles/tree/master/.config/eslint))
-  - with react
+setup in [example-prject-base](https://github.com/gyft-orga/example-project-base)
+
+- configure typescript with react
+- configure jest with react in Typescript
+- configure linting with react
+- configure logger (morgan or other) [a la](https://github.com/jneidel/lock-me-out/blob/master/src/util/http-logger.ts)
+- configure E2E tests with react (can jest do this?, else selenium)

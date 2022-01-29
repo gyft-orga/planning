@@ -22,8 +22,6 @@
     - What effect have my changes made?
     - Why was the change needed?
     - What are the changes in reference to?
-- Versioning
-  - [semver](https://semver.org)
 - Code Review
   - together?
 - Linting
@@ -34,6 +32,11 @@
   - no [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming))
   - no comments unless absolutely necessary (cf. clean code, comments are a
     failure to express yourself in code)
+  - import/export
+    - classes and functions are exported using `export`
+    - classes and functions are imported using `import { Class, function } from "./directory` not the file directly
+    - the `directory/index.ts` file exports all of a directories exports using `export * from "./file"`
+    - TODO: add code example
   - todo:
     - rules for logging
     - rules for throwing exceptions
@@ -62,6 +65,10 @@
   - https://en.wikipedia.org/wiki/Naming_convention_(programming)#JavaScript
   - https://www.crockford.com/code.html
 - [SOLID](https://en.wikipedia.org/wiki/SOLID)
+
+**Later if ever**
+- Versioning
+  - [semver](https://semver.org)
 
 ### Organization
 - Configure Project
@@ -117,4 +124,4 @@ setup in [example-project-base](https://github.com/gyft-orga/example-project-bas
 - configure jest with react in Typescript
 - configure linting with react
 - configure logger (morgan or other) [a la](https://github.com/jneidel/lock-me-out/blob/master/src/util/http-logger.ts)
-- configure E2E tests with react (can jest do this?, else selenium)
+- configure E2E tests with react (selenium)

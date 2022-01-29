@@ -110,8 +110,9 @@ add dependencies:
 
 ### Set up project base
 
-setup in [example-prject-base](https://github.com/gyft-orga/example-project-base)
+setup in [example-project-base](https://github.com/gyft-orga/example-project-base)
 
+- add react
 - configure typescript with react
 - configure jest with react in Typescript
 - configure linting with react

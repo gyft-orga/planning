@@ -83,8 +83,7 @@
 
 **Stack:**
 - React
-- TypeScript
-- Express
+- Node/TypeScript, Express
 - Jest
 - Mongo/Mongoose
 - Rabbit MQ/amqplib
@@ -93,7 +92,6 @@
 
 ### Setting up the server
 
-- ~~netwise~~
 - find alternative hosting solution (using gh student credits?)
 - add ssh keys
 - install & config zsh, tmux
@@ -119,9 +117,5 @@ add dependencies:
 
 setup in [example-project-base](https://github.com/gyft-orga/example-project-base)
 
-- add react
-- configure typescript with react
-- configure jest with react in Typescript
 - configure linting with react
 - configure logger (morgan or other) [a la](https://github.com/jneidel/lock-me-out/blob/master/src/util/http-logger.ts)
-- configure E2E tests with react (selenium)

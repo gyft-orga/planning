@@ -4,6 +4,8 @@ specific gift.
 Acceptance:
 - gift can't be claimed by other users
 - notification to profile owner, confirmation required?
+- claimed gift are archived after the event (marked as gifted) -> As a profile
+owner I want to see a list of my achived gifts.
 
 ---
 
@@ -30,4 +32,3 @@ Acceptance:
   - as status on gift or separate lists
 
 ---
-

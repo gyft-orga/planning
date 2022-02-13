@@ -113,9 +113,3 @@ add dependencies:
 - create private repos with:
   - accounting (spreadsheet for income & expenses: advanced by whom, date & purpose)
 
-### Set up project base
-
-setup in [example-project-base](https://github.com/gyft-orga/example-project-base)
-
-- configure linting with react
-- configure logger (morgan or other) [a la](https://github.com/jneidel/lock-me-out/blob/master/src/util/http-logger.ts)
